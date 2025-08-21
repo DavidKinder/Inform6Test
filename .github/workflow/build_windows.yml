@@ -9,4 +9,4 @@ jobs:
       with:
         msystem: MINGW64
     - shell: msys2 {0}
-    - run: clang -DPC_WIN32 -O2 -s -o inform6.exe *.c
+      run: clang -DPC_WIN32 -O2 -s -o inform6.exe *.c
