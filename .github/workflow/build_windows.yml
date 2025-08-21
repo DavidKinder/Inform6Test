@@ -1,5 +1,7 @@
 name: Build on Windows
-on: workflow_dispatch
+
+on: workflow_dispatch:
+
 jobs:
   build:
     runs-on: windows-latest
@@ -9,4 +11,3 @@ jobs:
         msystem: MINGW64
     - shell: msys2 {0}
     - run: clang -DPC_WIN32 -O2 -s -o inform6.exe *.c
-    
