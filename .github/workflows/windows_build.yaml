@@ -11,5 +11,5 @@ jobs:
     - uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
-        install: mingw-w64-i686-clang
-    - run: /mingw32/bin/clang -DPC_WIN32 -O2 -s -o inform6.exe arrays.c asm.c bpatch.c chars.c directs.c errors.c expressc.c expressp.c files.c inform.c lexer.c memory.c objects.c states.c symbols.c syntax.c tables.c text.c veneer.c verbs.c
+        install: mingw-w64-i686-gcc
+    - run: /mingw32/bin/gcc -DPC_WIN32 -O2 -s -o inform6 *.c
