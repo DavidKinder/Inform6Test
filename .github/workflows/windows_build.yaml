@@ -4,10 +4,12 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
     steps:
     - uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
         install: mingw-w64-i686-clang
-    - shell: msys2 {0}
-      run: clang -DPC_WIN32 -O2 -s -o inform6.exe *.c
+    - run: clang -DPC_WIN32 -O2 -s -o inform6.exe *.c
